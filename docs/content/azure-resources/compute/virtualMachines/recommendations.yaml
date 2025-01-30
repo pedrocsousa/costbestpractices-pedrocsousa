@@ -22,7 +22,7 @@
   acorlGuid: 2185ecf8-7084-432a-8d86-729c1155c778
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
-  recommendationImpact: Medium
+  recommendationImpact: Low
   recommendationResourceType: Microsoft.Compute/virtualMachines
   recommendationMetadataState: Active
   remediationAction: |
@@ -37,3 +37,43 @@
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/b-family"
       - name: B-Series CPU Credit Model
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/b-series-cpu-credit-model"
+
+- description: Use Spot VMs
+  acorlGuid: c4ee932c-d5e5-4759-a275-7c333086f9bd
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Compute/virtualMachines
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use Spot VMs to take advantage of discounted pricing for interruptible workloads like batch processing, testing, and stateless applications.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Use Azure Spot Virtual Machines
+      url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+      - name: Spot Virtual Machine size recommendation
+      url: "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/spot-vm-size-recommendation"
+
+- description: Start/Stop VMs based on usage patterns
+  acorlGuid: c4ee932c-d5e5-4759-a275-7c333086f9bd
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Compute/virtualMachines
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use Spot VMs to take advantage of discounted pricing for interruptible workloads like batch processing, testing, and stateless applications.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Use Azure Spot Virtual Machines
+      url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+      - name: Spot Virtual Machine size recommendation
+      url: "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/spot-vm-size-recommendation"
