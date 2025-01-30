@@ -15,7 +15,7 @@
   learnMoreLink:
     - name: Using Microsoft Copilot in Azure to find the best VM size for you
       url: "https://techcommunity.microsoft.com/blog/azurecompute/using-microsoft-copilot-in-azure-to-find-the-best-vm-size-for-you/4356049"
-      - name: Deploy virtual machines effectively using Microsoft Copilot in Azure
+    - name: Deploy virtual machines effectively using Microsoft Copilot in Azure
       url: "https://learn.microsoft.com/en-us/azure/copilot/deploy-vms-effectively"
 
 - description: Use Burstable (B-Series) VMs
@@ -35,7 +35,7 @@
   learnMoreLink:
     - name: B-Series VM size
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/general-purpose/b-family"
-      - name: B-Series CPU Credit Model
+    - name: B-Series CPU Credit Model
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/sizes/b-series-cpu-credit-model"
 
 - description: Use Spot VMs
@@ -55,25 +55,43 @@
   learnMoreLink:
     - name: Use Azure Spot Virtual Machines
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
-      - name: Spot Virtual Machine size recommendation
+    - name: Spot Virtual Machine size recommendation
       url: "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/spot-vm-size-recommendation"
 
-- description: Start/Stop VMs based on usage patterns
-  acorlGuid: c4ee932c-d5e5-4759-a275-7c333086f9bd
+- description: Automatically Start/Stop VMs based on usage patterns
+  acorlGuid: bcc098d1-9138-4ce2-8c43-e2fdaf28e714
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
-  recommendationImpact: Low
+  recommendationImpact: Medium
   recommendationResourceType: Microsoft.Compute/virtualMachines
   recommendationMetadataState: Active
   remediationAction: |
-    Use Spot VMs to take advantage of discounted pricing for interruptible workloads like batch processing, testing, and stateless applications.
+    Use the Start/Stop VMs v2 feature to automatically start and stop Azure VMs based on a custom schedule. This reduces costs by running VMs only when needed. The feature supports multiple subscriptions, provides usage insights via Azure Application Insights, and can send optional notifications through action groups. Configure it in the Azure portal to optimize resource usage and cost efficiency.
   potentialBenefits: Optimize existing resources
   pgVerified: false
-  publishedToLearn: false
-  automationAvailable: false
+  publishedToLearn: true
+  automationAvailable: true
   tags: null
   learnMoreLink:
-    - name: Use Azure Spot Virtual Machines
-      url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
-      - name: Spot Virtual Machine size recommendation
-      url: "https://learn.microsoft.com/en-us/azure/virtual-machine-scale-sets/spot-vm-size-recommendation"
+    - name: Start/Stop VMs
+      url: "https://learn.microsoft.com/en-us/azure/azure-functions/start-stop-vms/overview"
+
+- description: Modernize workloads
+  acorlGuid: b5fc6ddb-e08b-4355-b3a4-15a4e8747aba
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.Compute/virtualMachines
+  recommendationMetadataState: Active
+  remediationAction: |
+    Evaluate transitioning applications to Azure App Service or Azure Kubernetes Service (AKS) for scalable and cost-effective alternatives to traditional VMs.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: true
+  automationAvailable: true
+  tags: null
+  learnMoreLink:
+    - name: Assessment overview (migrate to Azure App Service)
+      url: "https://learn.microsoft.com/en-us/azure/migrate/concepts-azure-webapps-assessment-calculation"
+    - name: Migrate to Azure Kubernetes Service (AKS)
+      url: "https://learn.microsoft.com/en-us/azure/aks/aks-migration"
