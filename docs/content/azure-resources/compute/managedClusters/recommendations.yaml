@@ -56,7 +56,7 @@
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
   recommendationImpact: Low
-  recommendationResourceType: Microsoft.Compute/virtualMachines
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
   recommendationMetadataState: Active
   remediationAction: |
     Deploy Spot VMs in AKS to save up to 90% on compute costs by using Azure’s unused capacity. Ideal for dev/test, batch jobs, and workloads that can tolerate interruptions, but note that Azure may reclaim capacity at any time.
@@ -70,3 +70,59 @@
       url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
     - name: Add an Azure Spot node pool to an Azure Kubernetes Service (AKS) cluster
       url: "https://learn.microsoft.com/en-us/azure/aks/spot-node-pool"
+
+- description: Use cluster preset configurations
+  acorlGuid: 5cba0ce3-0860-405e-a386-e1a948f30795
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Simplify AKS setup by using cluster preset configurations in the Azure portal. Choose Dev/Test for development and testing, or Production Economy for cost-conscious production workloads that can handle interruptions. These presets provide optimized, adjustable settings for VM SKUs, regions, and node counts to balance performance and cost.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Cluster configuration presets in the Azure portal
+      url: "https://learn.microsoft.com/en-us/azure/aks/quotas-skus-regions#cluster-configuration-presets-in-the-azure-portal"
+
+- description: Consider multitenancy
+  acorlGuid: df717616-7c47-4e6d-ab5b-28b59a6164c8
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Reduce management overhead and improve resource utilization by running multitenant AKS clusters. Use Kubernetes Namespaces for logical isolation, allowing teams or business units to share infrastructure while maintaining separation. This approach increases pod density and optimizes costs.
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Azure Kubernetes Service (AKS) considerations for multitenancy
+      url: "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks"
+
+  - description: Enable application autoscaling
+  acorlGuid: 8e3b5526-652d-4390-b89f-386f38e26044
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Improve efficiency by enabling Vertical Pod Autoscaler (VPA) to adjust CPU and memory requests based on usage and Horizontal Pod Autoscaler (HPA) to scale pod replicas based on demand. Avoid using both for the same metrics to prevent conflicts. For event-driven workloads, use Kubernetes Event-driven Autoscaler (KEDA) to scale based on triggers like HTTP traffic or message queue length.  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Vertical pod autoscaling
+      url: "https://learn.microsoft.com/en-us/azure/aks/vertical-pod-autoscaler"
+    - name: Horizontal pod autoscaler
+      url: "https://learn.microsoft.com/en-us/azure/aks/concepts-scale#horizontal-pod-autoscaler"
+    - name: Simplified application autoscaling with Kubernetes Event-driven Autoscaling (KEDA) add-on
+      url: "https://learn.microsoft.com/en-us/azure/aks/keda-about"
