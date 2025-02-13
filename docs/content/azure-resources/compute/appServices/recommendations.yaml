@@ -39,7 +39,7 @@
       url: "https://azure.microsoft.com/en-us/pricing/details/app-service/windows/"
 
 - description: Consider consolidating apps into fewer plans
-  acorlGuid: b0d55865-daec-451a-8568-f779fa692bc4
+  acorlGuid: cff32dc5-57ec-45bf-ba4e-f695b13de92b
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
   recommendationImpact: Low
