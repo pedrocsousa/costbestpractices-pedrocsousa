@@ -1,1 +1,72 @@
+- description: Select the appropriate AKS Tier
+  acorlGuid: 4377cee6-dbbc-448a-9c7a-74ec87116719
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use the Free Tier for development and testing to avoid control plane costs, paying only for VMs, storage, and networking. Choose the Standard Tier for production workloads needing scalability, performance, and uptime SLA support. For mission-critical workloads, opt for the Premium Tier, which offers high availability, a financially backed SLA, and extended Kubernetes version support.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Free, Standard, and Premium pricing tiers for Azure Kubernetes Service (AKS) cluster management
+      url: "https://learn.microsoft.com/en-us/azure/aks/free-standard-pricing-tiers"
 
+- description: Increase Cost Visibility with Microsoft Cost Management
+  acorlGuid: 0ff25323-819f-466f-80b2-4beeec398dd4
+  recommendationTypeId: null
+  recommendationControl: Governance/CostVisibility
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use Microsoft Cost Management to track spending, set budgets, and forecast costs. Enable the AKS Cost Analysis add-on for for granular cluster cost breakdown by Kubernetes constructs along with Azure Compute, Network, and Storage categories.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Azure Kubernetes Service (AKS) cost analysis
+      url: "https://learn.microsoft.com/en-us/azure/aks/cost-analysis"
+
+- description: Use cluster start/stop feature
+  acorlGuid: 38ca350f-786b-4a30-9bd2-8f716de4ccff
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Reduce costs by stopping unused dev/test clusters with the cluster start/stop feature. It shuts down node pools while preserving cluster state, eliminating unnecessary compute charges.  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Stop and start an Azure Kubernetes Service (AKS) cluster
+      url: "https://learn.microsoft.com/en-us/azure/aks/start-stop-cluster"
+
+- description: Use Spot VMs
+  acorlGuid: c4ee932c-d5e5-4759-a275-7c333086f9bd
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Compute/virtualMachines
+  recommendationMetadataState: Active
+  remediationAction: |
+    Deploy Spot VMs in AKS to save up to 90% on compute costs by using Azure’s unused capacity. Ideal for dev/test, batch jobs, and workloads that can tolerate interruptions, but note that Azure may reclaim capacity at any time.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Use Azure Spot Virtual Machines
+      url: "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms"
+    - name: Add an Azure Spot node pool to an Azure Kubernetes Service (AKS) cluster
+      url: "https://learn.microsoft.com/en-us/azure/aks/spot-node-pool"
