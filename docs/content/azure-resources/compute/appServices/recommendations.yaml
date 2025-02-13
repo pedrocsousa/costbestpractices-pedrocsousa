@@ -2,7 +2,7 @@
   acorlGuid: 805b2668-ff6a-4c7d-86de-4fecb9279213
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
-  recommendationImpact: Low
+  recommendationImpact: Medium
   recommendationResourceType: Microsoft.Web/serverfarms
   recommendationMetadataState: Active
   remediationAction: |
@@ -22,7 +22,7 @@
   acorlGuid: b0d55865-daec-451a-8568-f779fa692bc4
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
-  recommendationImpact: Low
+  recommendationImpact: High
   recommendationResourceType: Microsoft.Web/serverfarms
   recommendationMetadataState: Active
   remediationAction: |
@@ -42,7 +42,7 @@
   acorlGuid: cff32dc5-57ec-45bf-ba4e-f695b13de92b
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
-  recommendationImpact: Low
+  recommendationImpact: Medium
   recommendationResourceType: Microsoft.Web/serverfarms
   recommendationMetadataState: Active
   remediationAction: |
@@ -55,3 +55,21 @@
   learnMoreLink:
     - name: Should I put an app in a new plan or an existing plan?
       url: "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans#should-i-put-an-app-in-a-new-plan-or-an-existing-plan"
+      
+- description: Implement efficient autoscaling
+  acorlGuid: cc18a06a-82cb-40ae-b72a-56b923f5ddbc
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.Web/serverfarms
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use autoscaling instead of manual instance adjustments to optimize performance and costs. Choose a rule-free autoscaling option for simplicity, or define precise rules based on thorough performance testing. Ensure enough resources are available to meet performance targets, and account for application initialization time when setting scaling rules.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Overview of autoscale in Azure
+      url: "https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-overview"
