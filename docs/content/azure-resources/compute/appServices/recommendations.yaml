@@ -1,1 +1,57 @@
+- description: Choose the right app service plan
+  acorlGuid: 805b2668-ff6a-4c7d-86de-4fecb9279213
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Web/serverfarms
+  recommendationMetadataState: Active
+  remediationAction: |
+    Choose the right App Service Plan tier based on workload needs: Free/Shared for testing, Basic/Standard for predictable production workloads, and Premium for high-performance apps requiring advanced features. Regularly assess usage to avoid over-provisioning and eliminate unnecessary costs.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Azure App Service plan overview
+      url: "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans"
+    - name: Understand the full billing model for Azure App Service
+      url: "https://learn.microsoft.com/en-us/azure/app-service/overview-manage-costs#understand-the-full-billing-model-for-azure-app-service"
 
+- description: Upgrade from PremiumV2 to Premium V3
+  acorlGuid: b0d55865-daec-451a-8568-f779fa692bc4
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Web/serverfarms
+  recommendationMetadataState: Active
+  remediationAction: |
+    Upgrade your app service plans to Premium V3 for improved performance while saving around 20% compared to Premium V2. Use the App Service Pricing Calculator to compare costs and optimize your plan.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Configure Premium V3 tier for Azure App Service
+      url: "https://learn.microsoft.com/en-us/azure/app-service/app-service-configure-premium-tier"
+    - name: Azure App Service on Windows pricing
+      url: "https://azure.microsoft.com/en-us/pricing/details/app-service/windows/"
+
+- description: Consider consolidating apps into fewer plans
+  acorlGuid: b0d55865-daec-451a-8568-f779fa692bc4
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Web/serverfarms
+  recommendationMetadataState: Active
+  remediationAction: |
+    To save costs, host multiple apps in one App Service Plan if resources allow. Ensure the plan can handle the additional load to avoid performance issues. Isolate an app in a new plan if it's resource-intensive, requires independent scaling, or needs deployment in a different region. Refer to SKU limits to avoid overloading. Keep in mind that active slots also consume resources.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Should I put an app in a new plan or an existing plan?
+      url: "https://learn.microsoft.com/en-us/azure/app-service/overview-hosting-plans#should-i-put-an-app-in-a-new-plan-or-an-existing-plan"
