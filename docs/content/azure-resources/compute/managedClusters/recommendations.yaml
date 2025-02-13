@@ -98,6 +98,7 @@
   recommendationMetadataState: Active
   remediationAction: |
     Reduce management overhead and improve resource utilization by running multitenant AKS clusters. Use Kubernetes Namespaces for logical isolation, allowing teams or business units to share infrastructure while maintaining separation. This approach increases pod density and optimizes costs.
+  potentialBenefits: Optimize existing resources
   pgVerified: false
   publishedToLearn: false
   automationAvailable: false
@@ -106,7 +107,7 @@
     - name: Azure Kubernetes Service (AKS) considerations for multitenancy
       url: "https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/service/aks"
 
-  - description: Enable application autoscaling
+- description: Enable application autoscaling
   acorlGuid: 8e3b5526-652d-4390-b89f-386f38e26044
   recommendationTypeId: null
   recommendationControl: UsageOptimization/OptimizeResources
@@ -114,7 +115,8 @@
   recommendationResourceType: Microsoft.ContainerService/managedClusters
   recommendationMetadataState: Active
   remediationAction: |
-    Improve efficiency by enabling Vertical Pod Autoscaler (VPA) to adjust CPU and memory requests based on usage and Horizontal Pod Autoscaler (HPA) to scale pod replicas based on demand. Avoid using both for the same metrics to prevent conflicts. For event-driven workloads, use Kubernetes Event-driven Autoscaler (KEDA) to scale based on triggers like HTTP traffic or message queue length.  potentialBenefits: Optimize existing resources
+    Improve efficiency by enabling Vertical Pod Autoscaler (VPA) to adjust CPU and memory requests based on usage and Horizontal Pod Autoscaler (HPA) to scale pod replicas based on demand. Avoid using both for the same metrics to prevent conflicts. For event-driven workloads, use Kubernetes Event-driven Autoscaler (KEDA) to scale based on triggers like HTTP traffic or message queue length.  
+  potentialBenefits: Optimize existing resources
   pgVerified: false
   publishedToLearn: false
   automationAvailable: false
@@ -126,3 +128,23 @@
       url: "https://learn.microsoft.com/en-us/azure/aks/concepts-scale#horizontal-pod-autoscaler"
     - name: Simplified application autoscaling with Kubernetes Event-driven Autoscaling (KEDA) add-on
       url: "https://learn.microsoft.com/en-us/azure/aks/keda-about"
+
+- description: Enable infrastructure autoscaling
+  acorlGuid: 7a91559e-1baf-4ebd-a4a0-51ddd0242631
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+    Use Cluster Autoscaler to automatically adjust node count based on workload demand, scaling up when resources are needed and down when nodes are idle. Enable Node Autoprovisioning (NAP) to simplify VM SKU selection, optimizing node pools for cost and performance without manual configuration.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Cluster autoscaler
+      url: "https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler-overview"
+    - name: Node autoprovisioning
+      url: "https://learn.microsoft.com/en-us/azure/aks/node-autoprovision"
