@@ -148,3 +148,41 @@
       url: "https://learn.microsoft.com/en-us/azure/aks/cluster-autoscaler-overview"
     - name: Node autoprovisioning
       url: "https://learn.microsoft.com/en-us/azure/aks/node-autoprovision"
+
+- description: Optimize AKS Control Plane Logging
+  acorlGuid: 17f0aa27-e655-4b45-b6ea-11eb662b654d
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+   Enable diagnostic settings in Azure Monitor, but disable kube-audit when not required. Use kube-audit-admin for fewer events and configure AKSAudit logs as basic logs to reduce costs.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: AKS control plane/resource logs
+      url: "https://learn.microsoft.com/en-us/azure/aks/monitor-aks#aks-control-planeresource-logs"
+    - name: Collect control plane logs for AKS clusters
+      url: "https://learn.microsoft.com/en-us/azure/azure-monitor/containers/monitor-kubernetes#collect-control-plane-logs-for-aks-clusters"      
+
+- description: Optimize AKS Data Plane Logging
+  acorlGuid: 16b8a453-dd44-4856-a929-7e2c47d39c45
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Medium
+  recommendationResourceType: Microsoft.ContainerService/managedClusters
+  recommendationMetadataState: Active
+  remediationAction: |
+   Use Container Insights to monitor and troubleshoot AKS workloads while optimizing costs. Customize data collection settings via Azure Monitor Data Collection Rules (DCR) to control log ingestion. Enable only necessary tables, adjust collection intervals, and exclude unneeded namespaces. For metrics, use Azure Monitor managed Prometheus and Azure Managed Grafana for visualization instead of collecting all logs.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: AKS data plane/Container Insights logs
+      url: "https://learn.microsoft.com/en-us/azure/aks/monitor-aks#aks-control-planeresource-logs"
