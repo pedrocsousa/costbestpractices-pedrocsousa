@@ -73,3 +73,23 @@
   learnMoreLink:
     - name: Overview of autoscale in Azure
       url: "https://learn.microsoft.com/en-us/azure/azure-monitor/autoscale/autoscale-overview"
+
+- description: Consider Serverless Options for Microservices
+  acorlGuid: bdaf8daa-586e-4779-ae6e-00ac2fc65327
+  recommendationTypeId: null
+  recommendationControl: UsageOptimization/OptimizeResources
+  recommendationImpact: Low
+  recommendationResourceType: Microsoft.Web/serverfarms
+  recommendationMetadataState: Active
+  remediationAction: |
+    Reduce costs and simplify management by replacing App Services with Azure Functions for event-driven workloads and Logic Apps for workflow automation. These serverless options scale automatically, eliminating infrastructure overhead while optimizing performance.
+  potentialBenefits: Optimize existing resources
+  pgVerified: false
+  publishedToLearn: false
+  automationAvailable: false
+  tags: null
+  learnMoreLink:
+    - name: Azure Functions overview
+      url: "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
+    - name: What is Azure Logic Apps?
+      url: "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
