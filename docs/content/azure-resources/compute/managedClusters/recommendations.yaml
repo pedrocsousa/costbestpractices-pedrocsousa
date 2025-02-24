@@ -214,6 +214,7 @@
   recommendationMetadataState: Active
   remediationAction: |
     Each node size supports a maximum number of disks. Different node sizes also provide different amounts of local storage and network bandwidth. Plan appropriately for your application demands to deploy the right size of nodes.  potentialBenefits: Optimize existing resources
+  potentialBenefits: Optimize existing resources
   pgVerified: false
   publishedToLearn: false
   automationAvailable: false
