@@ -89,7 +89,5 @@
   automationAvailable: false
   tags: null
   learnMoreLink:
-    - name: Azure Functions overview
-      url: "https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview"
-    - name: What is Azure Logic Apps?
-      url: "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview"
+    - name: Azure serverless overview: Create cloud-based apps and solutions with Azure Logic Apps and Azure Functions
+      url: "https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-serverless-overview"
